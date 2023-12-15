@@ -117,4 +117,4 @@ def Logout():
     return redirect(url_for('Login'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="https://writinggwizardd.onrender.com/", debug=True)
