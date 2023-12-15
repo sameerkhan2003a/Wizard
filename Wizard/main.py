@@ -20,7 +20,7 @@ app.secret_key = secret  # set the secret key
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-  
+    result=None
     if request.method == 'POST':
         essayLength = request.form['essayLength']
         essayQuality = request.form['essayQuality']
