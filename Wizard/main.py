@@ -5,14 +5,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import secrets
 import json
 import os
-os.environ.get('secret_key')
+
 
 
 
 app = Flask(__name__)
 
-secret = secrets.token_urlsafe(32)
-app.secret_key = secret  # set the secret key
 
 
 # This function checks if the user is logged in
@@ -26,7 +24,7 @@ def index():
         essayQuality = request.form['essayQuality']
         essayTopic = request.form['essayTopic']
 
-        client = openai.OpenAI(api_key=secret_key)
+        client = openai.OpenAI(api_key=os.environ.get('secret_key'))
      
         response = client.chat.completions.create(
             model="gpt-3.5-turbo-1106",
