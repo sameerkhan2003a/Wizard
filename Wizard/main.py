@@ -67,7 +67,7 @@ def about():
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 @app.route('/SignUp', methods=['GET', 'POST'])
 def SignUp():
