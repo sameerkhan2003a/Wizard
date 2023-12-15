@@ -4,6 +4,7 @@ import openai
 from werkzeug.security import generate_password_hash, check_password_hash
 import secrets
 import json
+import os
 
 
 
@@ -41,7 +42,7 @@ def index():
         essayQuality = request.form['essayQuality']
         essayTopic = request.form['essayTopic']
 
-        client = openai.OpenAI(api_key='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')
+        client = openai.OpenAI(api_key=os.environ.get('secret_key'))
      
         response = client.chat.completions.create(
             model="gpt-3.5-turbo-1106",
