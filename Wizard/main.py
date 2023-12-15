@@ -29,8 +29,8 @@ users = load_users()
 def is_logged_in():
     return 'username' in session
 
-@app.route('/index', methods=['GET', 'POST'])
-def index():
+@app.route('/', methods=['GET', 'POST'])
+def ():
     if not is_logged_in():
         flash('You need to log in first.')
         return redirect(url_for('Login'))
