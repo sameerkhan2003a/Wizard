@@ -33,7 +33,7 @@ def index():
             temperature=0,
             max_tokens=1000,
             messages=[
-                    {"role": "system", "content": f"You are a Writing Wizard who writes essays precisely of {essayLength} size or length and of {essayQuality} quality focused totally on the topic, finally be friendly with the user and do your job as perfectly as possible, Seperate the essay completely from your wizard intro, Be unbiased."},
+                    {"role": "system", "content": f"You are a Writing Wizard who writes essays precisely of {essayLength} size orr length and of {essayQuality} quality focused totally on the topic, finally be friendly with the user and do your job as perfectly as possible, Seperate the essay completely from your wizard intro, Be unbiased."},
                { "role": "user", "content":  essayTopic},
             ]
         )
