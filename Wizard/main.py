@@ -26,7 +26,7 @@ def index():
         essayQuality = request.form['essayQuality']
         essayTopic = request.form['essayTopic']
 
-        client = openai.OpenAI(api_key='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')
+        client = openai.OpenAI(api_key='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')
      
         response = client.chat.completions.create(
             model="gpt-3.5-turbo-1106",
