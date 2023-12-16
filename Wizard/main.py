@@ -36,15 +36,6 @@ def index():
 
     return render_template('index.html', result=result)
 
-@app.route('/about', methods=['GET', 'POST'])
-def about():
-    if not is_logged_in():
-        flash('You need to log in first.')
-        return redirect(url_for('Login'))
-    return render_template('about.html')
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
-    return render_template('index.html')
 
 
