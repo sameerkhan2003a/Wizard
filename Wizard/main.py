@@ -8,7 +8,7 @@ import os
 
 
 
-app = Flask(__name__,template_folder='../templates')
+app = Flask(__name__,template_folder='templates')
 
 secret = secrets.token_urlsafe(32)
 app.secret_key = secret  # set the secret key
