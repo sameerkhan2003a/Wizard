@@ -12,9 +12,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if not is_logged_in():
-        flash('You need to log in first.')
-        return redirect(url_for('Login'))
+
 
     result = None 
     if request.method == 'POST':
