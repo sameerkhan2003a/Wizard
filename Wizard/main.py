@@ -6,7 +6,7 @@ import secrets
 import json
 import os
 
-
+app = Flask(__main__)
 
 
 
